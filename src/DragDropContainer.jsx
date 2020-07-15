@@ -105,7 +105,7 @@ class DragDropContainer extends React.Component {
 	};
 
 	generateDropEvent = (x, y) => {
-		const { targetKey } = this.props;
+		const { targetKey, onDrop } = this.props;
 
 		// generate a drop event in whatever we're currently dragging over
 		this.setCurrentTarget(x, y);
