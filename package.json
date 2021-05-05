@@ -8,7 +8,6 @@
   "bugs": {
     "url": "https://github.com/peterh32/react-drag-drop-container/issues"
   },
-  "homepage": "https://github.com/peterh32/react-drag-drop-container#readme",
   "scripts": {
     "build": "npm run build-demo; npm run build-dist",
     "build-demo": "webpack -d; cp ./demo/img/* ./public/img/; cp ./demo/*.html ./public/; cp ./demo/*.css ./public/",
@@ -44,8 +43,6 @@
     "eslint-plugin-react": "^6.10.3",
     "http-server": "^0.9.0",
     "node-sass": "^4.9.2",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
     "sass-loader": "^6.0.7",
     "shortid": "^2.2.12",
     "style-loader": "^0.16.1",
@@ -57,6 +54,8 @@
     "react-dom": ">=0.14.0"
   },
   "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "prop-types": "^15.6.2"
   }
 }
