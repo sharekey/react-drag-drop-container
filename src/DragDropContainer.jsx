@@ -168,7 +168,12 @@ class DragDropContainer extends React.Component {
 	};
 
 	drag = (x, y) => {
+		const { left, top } = this.state;
 		const { xOnly, yOnly, dragData, onDrag } = this.props;
+
+		//ignore a falsely triggered event on double-click
+		if (left === x && top === y)
+			return;
 
 		this.generateEnterLeaveEvents(x, y);
 
