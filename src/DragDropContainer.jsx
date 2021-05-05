@@ -25,6 +25,7 @@ class DragDropContainer extends React.Component {
 		this.sourceElem = null;
 		this.currentTarget = null;
 		this.prevTarget = null;
+		this.startDragTimeoutId = null;
 
 		// scrolling at edge of window
 		this.scrollTimer = null;
@@ -168,7 +169,12 @@ class DragDropContainer extends React.Component {
 	};
 
 	drag = (x, y) => {
+		const { left, top } = this.state;
 		const { xOnly, yOnly, dragData, onDrag } = this.props;
+
+		//ignoring a falsely triggered by double-clicking event 
+		if (left === x && top === y)
+			return;
 
 		this.generateEnterLeaveEvents(x, y);
 
