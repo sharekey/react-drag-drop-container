@@ -171,7 +171,7 @@ class DragDropContainer extends React.Component {
 		const { left, top } = this.state;
 		const { xOnly, yOnly, dragData, onDrag } = this.props;
 
-		//ignoring a falsely triggered by double-clicking event 
+		//ignore a falsely triggered event on double-click
 		if (left === x && top === y)
 			return;
 
