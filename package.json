@@ -43,6 +43,8 @@
     "eslint-plugin-react": "^6.10.3",
     "http-server": "^0.9.0",
     "node-sass": "^4.9.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "sass-loader": "^6.0.7",
     "shortid": "^2.2.12",
     "style-loader": "^0.16.1",
@@ -54,8 +56,6 @@
     "react-dom": ">=0.14.0"
   },
   "dependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
     "prop-types": "^15.6.2"
   }
 }
