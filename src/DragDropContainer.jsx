@@ -25,7 +25,6 @@ class DragDropContainer extends React.Component {
 		this.sourceElem = null;
 		this.currentTarget = null;
 		this.prevTarget = null;
-		this.startDragTimeoutId = null;
 
 		// scrolling at edge of window
 		this.scrollTimer = null;
