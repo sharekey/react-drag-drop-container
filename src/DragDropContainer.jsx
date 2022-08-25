@@ -170,9 +170,10 @@ class DragDropContainer extends React.Component {
 	drag = (x, y) => {
 		const { left, top } = this.state;
 		const { xOnly, yOnly, dragData, onDrag } = this.props;
+		const undraggableZone = 3;
 
-		//ignore a falsely triggered event on double-click
-		if (left === x && top === y)
+		//ignore a falsely triggered event on click
+		if (Math.abs(left - x) < undraggableZone && Math.abs(top - y) < undraggableZone)
 			return;
 
 		this.generateEnterLeaveEvents(x, y);
